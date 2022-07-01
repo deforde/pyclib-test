@@ -10,7 +10,7 @@ from loop import loop
 
 MIN_INPUT_VAL = 0
 MAX_INPUT_VAL = 1_000_000
-ARRAY_LEN = 100_000
+ARRAY_LEN = 500_000
 N_ITERATIONS = 100
 
 clib = cdll.LoadLibrary("clib/build/libfoo.so")

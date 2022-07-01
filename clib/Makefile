@@ -1,4 +1,4 @@
-.PHONY: all
+.PHONY: all builddir libfoo clean
 
 all: libfoo
 
