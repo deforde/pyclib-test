@@ -7,7 +7,7 @@ mkdirs: clean
 
 build: mkdirs
 	make -C clib
-	python3 setup.py build_ext -b build -t build
+	python3 setup.py build_ext --inplace
 
 clean:
 	rm -rf build

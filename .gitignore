@@ -1,3 +1,5 @@
+*.so
+loop.c
 .venv/
 build/
 clib/build/
