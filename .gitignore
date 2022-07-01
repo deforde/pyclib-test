@@ -1,0 +1,8 @@
+loop.c
+
+*.so
+
+.venv/
+build/
+pyclib_test.egg-info/
+clib/build/
