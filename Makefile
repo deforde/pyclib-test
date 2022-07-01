@@ -10,6 +10,6 @@ build: mkdirs
 	python3 setup.py build_ext --inplace
 
 clean:
-	rm -rf build
+	rm -rf build *.egg-info *.so loop.c
 	make -C clib clean
 
