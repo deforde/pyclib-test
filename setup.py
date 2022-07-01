@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-from Cython.Build import cythonize
 
 setup(
     name="pyclib-test",
@@ -24,5 +23,4 @@ setup(
         "Cython",
         "numpy",
     ],
-    ext_modules=cythonize("loop.pyx"),
 )
