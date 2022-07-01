@@ -7,7 +7,7 @@ mkdirs: clean
 
 build: mkdirs
 	make -C clib
-	python setup.py build_ext -b build -t build
+	python3 setup.py build_ext -b build -t build
 
 clean:
 	rm -rf build
@@ -15,6 +15,8 @@ clean:
 
 venv:
 	rm -rf .venv
-	python -m venv .venv
-	source .venv/bin/activate
+	python3 -m venv .venv
+
+install: venv
+	python3 -m pip install -e .
 
