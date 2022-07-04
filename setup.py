@@ -1,5 +1,15 @@
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, Extension
 from Cython.Build import cythonize
+import numpy
+
+ext_modules = [
+    Extension(
+        "loop",
+        sources=["loop.pyx"],
+        libraries=["foo"],
+        library_dirs=["clib/build/"],
+    )
+]
 
 setup(
     name="pyclib-test",
@@ -24,5 +34,6 @@ setup(
         "Cython",
         "numpy",
     ],
-    ext_modules=cythonize("loop.pyx"),
+    ext_modules=cythonize(ext_modules),
+    include_dirs=[numpy.get_include(), "clib"],
 )

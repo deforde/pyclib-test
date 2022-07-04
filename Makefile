@@ -16,6 +16,6 @@ install: clean
 	rm -rf .venv
 	python3 -m venv .venv
 	. .venv/bin/activate
-	python3 -m pip install Cython
+	python3 -m pip install Cython numpy
 	python3 -m pip install -e .
 

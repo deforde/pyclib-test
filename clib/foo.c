@@ -1,6 +1,8 @@
 #include <math.h>
 #include <stddef.h>
 
+#include "foo.h"
+
 float foo(float i)
 {
     return sqrtf(i);

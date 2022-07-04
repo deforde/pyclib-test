@@ -25,8 +25,9 @@ funcv.argtypes = [POINTER(c_float), c_size_t, POINTER(c_float)]
 vec_func = np.vectorize(lambda x: func(x))
 
 v = np.array(
-    [uniform(MIN_INPUT_VAL, MAX_INPUT_VAL) for _ in range(ARRAY_LEN)], dtype=c_float
+    [uniform(MIN_INPUT_VAL, MAX_INPUT_VAL) for _ in range(ARRAY_LEN)], dtype=float
 )
+v_cfloat = v.astype(c_float)
 
 
 def raw_loop():
@@ -38,13 +39,13 @@ def vectorised():
 
 
 def cythonised():
-    return loop(func, v)
+    return loop(v)
 
 
 def c_loop():
     out = np.array([0 for _ in range(ARRAY_LEN)], dtype=c_float)
     funcv(
-        v.ctypes.data_as(POINTER(c_float)),
+        v_cfloat.ctypes.data_as(POINTER(c_float)),
         ARRAY_LEN,
         out.ctypes.data_as(POINTER(c_float)),
     )

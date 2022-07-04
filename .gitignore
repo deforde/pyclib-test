@@ -1,4 +1,5 @@
 *.so
+*.html
 loop.c
 .venv/
 build/
