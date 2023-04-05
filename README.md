@@ -6,5 +6,6 @@ Tests the performance of various techniques for calling `c` functions from `pyth
 
 ```
 make install
+source .venv/bin/activate
 make run
 ```
