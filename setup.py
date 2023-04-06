@@ -15,7 +15,7 @@ setup(
     name="pyclib-test",
     version="0.1.0",
     description="Test vectorisation of c function calls",
-    url="https://bitbucket.org:lifeq/lq.vo2max",
+    url="https://github.com/deforde/pyclib-test",
     author="Daniel Forde",
     author_email="daniel.forde001@gmail.com",
     classifiers=[
